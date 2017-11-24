@@ -9,6 +9,7 @@ all:
 	"-X ${BUILD_NAME}/version.BuildVersion=${BUILD_VERSION} \
 	-X '${BUILD_NAME}/version.BuildTime=${BUILD_TIME}' \
 	-X ${BUILD_NAME}/version.BuildName=${BUILD_NAME}" \
+	-ldflags "-s -w" \
 	-o ${BUILD_NAME} ${SOURCE}
 
 clean:
